@@ -218,3 +218,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Codex repository-local state. Retain only shared hooks and approved memory
+# extension notes; keep machine-local configuration and generated state out of Git.
+.codex/*
+!.codex/hooks.json
+!.codex/memories/
+.codex/memories/*
+!.codex/memories/extensions/
+.codex/memories/extensions/*
+!.codex/memories/extensions/ad_hoc/
+.codex/memories/extensions/ad_hoc/*
+!.codex/memories/extensions/ad_hoc/notes/
+!.codex/memories/extensions/ad_hoc/notes/*.md
+
+# SSO-MANAGE operational outputs and local workspace files.
+archive/
+*.code-workspace
+
+# Local web.config scan outputs may contain usernames, data sources, and
+# plaintext passwords. Keep them out of Git; retain only the scanner and its
+# documentation in the repository.
+scripts/environment_scripts/webconfig_*.csv
+scripts/environment_scripts/webconfig_*.xlsx
