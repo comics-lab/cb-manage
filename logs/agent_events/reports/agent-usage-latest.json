@@ -1,0 +1,119 @@
+{
+  "agent_counts": {
+    "Arthur": 1,
+    "Pinky": 3,
+    "agent_usage_accounting": 2
+  },
+  "complete_v2_task_count": 2,
+  "contract_counts": {
+    "Usage_Accounting_Agent": 1
+  },
+  "decision_governance_counts": {
+    "applied": 1,
+    "not_required": 1
+  },
+  "decision_type_counts": {
+    "implementation": 2
+  },
+  "event_counts": {
+    "agent_loaded": 1,
+    "agent_routed": 1,
+    "contract_applied": 1,
+    "decision_recorded": 2,
+    "governance_declared": 4,
+    "session_started": 1,
+    "skill_loaded": 4,
+    "task_completed": 3,
+    "task_started": 2,
+    "validation_completed": 3
+  },
+  "event_ledger": "logs/agent_events/agent-events.jsonl",
+  "generated_at": "2026-11-03T22:10:52.598077+00:00",
+  "governance_status_counts": {
+    "applied": 2,
+    "not_required": 2
+  },
+  "record_count": 22,
+  "redaction": "Aggregates and identifiers only; no prompts, tool content, SQL, PII, credentials, or hidden reasoning.",
+  "session_count": 1,
+  "skill_counts": {
+    "agent-usage-accounting": 1,
+    "app-coding": 1,
+    "app-documentation": 1,
+    "web-platform": 1
+  },
+  "task_count": 4,
+  "tasks": [
+    {
+      "actual_agent": "agent_usage_accounting",
+      "actual_contracts": [
+        "Usage_Accounting_Agent"
+      ],
+      "actual_skills": [
+        "agent-usage-accounting",
+        "app-documentation",
+        "app-coding"
+      ],
+      "complete": true,
+      "decision_count": 1,
+      "event_count": 11,
+      "governance_status": "applied",
+      "missing_lifecycle_events": [],
+      "schema_version": 2,
+      "session_id": "01a0d4fc-585e-7fe2-ad68-a9dc9416e671",
+      "task_id": "01a1a313-de6b-7180-9c8d-8d56d12773bb"
+    },
+    {
+      "actual_agent": null,
+      "actual_contracts": [],
+      "actual_skills": [
+        "web-platform"
+      ],
+      "complete": true,
+      "decision_count": 1,
+      "event_count": 6,
+      "governance_status": "not_required",
+      "missing_lifecycle_events": [],
+      "schema_version": 2,
+      "session_id": "01a0d4fc-585e-7fe2-ad68-a9dc9416e671",
+      "task_id": "01a1a32f-2ede-7651-a873-a68d337bffbd"
+    },
+    {
+      "actual_agent": null,
+      "actual_contracts": [],
+      "actual_skills": [],
+      "complete": false,
+      "decision_count": 0,
+      "event_count": 1,
+      "governance_status": "not_required",
+      "missing_lifecycle_events": [
+        "task_completed",
+        "task_started",
+        "validation_completed"
+      ],
+      "schema_version": 2,
+      "session_id": "01a0d4fc-585e-7fe2-ad68-a9dc9416e671",
+      "task_id": "01a1a368-d776-7043-ad34-5e2daa9bd711"
+    },
+    {
+      "actual_agent": null,
+      "actual_contracts": [],
+      "actual_skills": [],
+      "complete": false,
+      "decision_count": 0,
+      "event_count": 3,
+      "governance_status": "applied",
+      "missing_lifecycle_events": [
+        "task_started"
+      ],
+      "schema_version": 2,
+      "session_id": "01a0d4fc-585e-7fe2-ad68-a9dc9416e671",
+      "task_id": "01a1a375-f360-7a40-a471-e7dfdaee746f"
+    }
+  ],
+  "usage": {
+    "available": false,
+    "record_count": 0
+  },
+  "v2_task_count": 4
+}

@@ -1,0 +1,26 @@
+# Non-secret local workspace configuration for CB-MANAGE.
+# Keep credentials, tokens, passwords, and private keys out of this file.
+
+project_base: "."
+project_name: "CB-MANAGE"
+project_role: "Repository management workspace"
+user_name: "Richard"
+agent_name: "Pinky"
+timezone: "America/Los_Angeles"
+proof_of_truth_dir: "truth"
+dialog_dir: "logs"
+
+logging_mode: "standard"
+error_logging_escalation: true
+startup_permission_prompt: true
+startup_permission_scope: "session"
+
+verbatim_logging:
+  enabled: false
+  purpose: "only when explicitly requested"
+  scope: "none_by_default"
+  destination: "docs/agents/chats"
+  include_intermediate_updates: false
+  include_tool_output: false
+  include_hidden_reasoning: false
+  redact_secrets: true

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cb-manage-usage-record",
+  "title": "CB-MANAGE Usage Record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_id",
+    "timestamp",
+    "session_id",
+    "runtime",
+    "source",
+    "confidence",
+    "reconciliation"
+  ],
+  "properties": {
+    "record_id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "minLength": 1 },
+    "session_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string" },
+    "runtime": { "type": "string", "enum": ["codex-cli", "vscode", "other"] },
+    "host": { "type": "string" },
+    "agent": { "type": "string" },
+    "skills": { "type": "array", "items": { "type": "string" } },
+    "contracts": { "type": "array", "items": { "type": "string" } },
+    "model": { "type": "string" },
+    "source": { "type": "string", "enum": ["runtime", "exit-summary", "manual", "estimate"] },
+    "input_tokens": { "type": ["integer", "null"], "minimum": 0 },
+    "cached_input_tokens": { "type": ["integer", "null"], "minimum": 0 },
+    "output_tokens": { "type": ["integer", "null"], "minimum": 0 },
+    "reasoning_tokens": { "type": ["integer", "null"], "minimum": 0 },
+    "total_tokens": { "type": ["integer", "null"], "minimum": 0 },
+    "pricing": { "type": "string" },
+    "allocation": { "type": "string" },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] },
+    "reconciliation": { "type": "string", "enum": ["pending", "matched", "variance", "unpriced", "unknown"] },
+    "redaction": { "type": "string" }
+  }
+}

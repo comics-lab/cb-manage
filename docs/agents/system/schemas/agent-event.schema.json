@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cb-manage-agent-event",
+  "title": "CB-MANAGE Agent Event",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "event_id",
+    "timestamp",
+    "session_id",
+    "event_type",
+    "runtime",
+    "host",
+    "source",
+    "status",
+    "confidence",
+    "redaction"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "enum": [1, 2] },
+    "event_id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "minLength": 1 },
+    "session_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string" },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "session_started", "task_started", "agent_routed", "agent_loaded",
+        "skill_loaded", "contract_applied", "tool_started", "tool_completed",
+        "validation_completed", "error_escalated", "error_resolved",
+        "governance_declared", "decision_recorded", "task_completed",
+        "session_closed", "usage_reconciled"
+      ]
+    },
+    "turn_id": { "type": "string" },
+    "runtime": { "type": "string", "enum": ["codex-cli", "vscode", "other"] },
+    "host": { "type": "string", "minLength": 1 },
+    "agent": { "type": "string" },
+    "skill": { "type": "string" },
+    "contract": { "type": "string" },
+    "model": { "type": "string" },
+    "permission_mode": { "type": "string" },
+    "hook_event": { "type": "string" },
+    "tool_name": { "type": "string" },
+    "tool_use_id": { "type": "string" },
+    "agent_instance_id": { "type": "string" },
+    "decision_id": { "type": "string" },
+    "decision_type": {
+      "type": "string",
+      "enum": ["routing", "implementation", "policy", "exception", "other"]
+    },
+    "governance_status": {
+      "type": "string",
+      "enum": ["applied", "not_required", "bypassed", "unknown"]
+    },
+    "expected_agent": { "type": "string" },
+    "actual_agent": { "type": "string" },
+    "expected_skills": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "actual_skills": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "expected_contracts": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "actual_contracts": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "basis": { "type": "string" },
+    "note": { "type": "string" },
+    "source": { "type": "string", "enum": ["runtime", "exit-summary", "manual", "estimate"] },
+    "status": { "type": "string", "enum": ["started", "active", "completed", "failed", "resolved", "pending"] },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] },
+    "redaction": { "type": "string", "minLength": 1 }
+  }
+}

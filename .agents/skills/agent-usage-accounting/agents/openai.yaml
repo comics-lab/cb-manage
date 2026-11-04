@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent Usage Accounting"
+  short_description: "Reconcile tokens and configured model costs"
+  default_prompt: "Use $agent-usage-accounting to reconcile measured and estimated token usage without exposing task content or secrets."
+policy:
+  allow_implicit_invocation: false
