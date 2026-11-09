@@ -14,6 +14,7 @@ is not the comic archive application itself.
 - [What is implemented](#what-is-implemented)
 - [Repository map](#repository-map)
 - [Skills and agents](#skills-and-agents)
+- [Comic metadata container skillset](#comic-metadata-container-skillset)
 - [Logging and usage accounting](#logging-and-usage-accounting)
 - [Planned work](#planned-work)
 - [Wiki and discussions](#wiki-and-discussions)
@@ -91,6 +92,40 @@ agents, contracts, and skills as CB-MANAGE responsibilities become concrete.
 Repository skills live under `.agents/skills/<skill-name>/`. Persona files live
 under `skills/agents/`; contracts live under `docs/agents/contracts/`.
 
+## Comic Metadata Container Skillset
+
+CB-MANAGE defines a planned skillset for reading, analyzing, and updating
+`MetronInfo.xml` and `ComicInfo.xml` metadata containers in comic archives.
+The design handoff is
+[`docs/metadata/GCD_Metadata_Containers_and_Codex_Integration.md`](docs/metadata/GCD_Metadata_Containers_and_Codex_Integration.md).
+The implementation review for the `comicbox` library used by Codex is in
+[`docs/metadata/Comicbox_Online_Metadata_and_Archive_Writes.md`](docs/metadata/Comicbox_Online_Metadata_and_Archive_Writes.md).
+
+The skillset is **specified, not yet implemented or installed**. Its intended
+capabilities are:
+
+- **Read/inspect:** locate metadata containers in an explicitly selected set
+  of archives and parse them without changing files.
+- **Analyze:** compare existing metadata with a selected local GCD record,
+  report match evidence and confidence, and identify conflicts or missing
+  values by format.
+- **Plan:** produce a dry-run report of proposed XML changes, source
+  provenance, target archive, and format before any write.
+- **Update:** after explicit approval of the archive set and proposed changes,
+  back up each archive, patch only approved fields, validate the XML/archive,
+  re-read it through the Codex metadata path, and record the result and
+  rollback location.
+
+Default behavior is read-only and dry-run. The skill must preserve unrelated
+and unknown XML fields, distinguish the two schemas, surface ambiguous GCD
+matches, and avoid overwriting curated values without an approved precedence
+rule. No GCD dataset has been downloaded or approved as authoritative: the GCD
+and Metron entries remain candidates in
+[`truth/EXTERNAL/manifest.md`](truth/EXTERNAL/manifest.md). The Codex scan found
+existing `comicbox` support for both write formats, but no GCD-driven update
+workflow was verified. The proposed CB-MANAGE skill bundle and archive-writing
+tools still need implementation and fixture-based validation.
+
 ## Logging and Usage Accounting
 
 The [extended logging runbook](docs/agents/system/runbooks/Extended_Logging_Runbook.md)
@@ -121,6 +156,9 @@ metadata; they are not a transcript logger.
 - Build a first handoff/resume pair and validate a fresh-session reconstruction.
 - Design and test comic archive utilities after their input/output rules are
   established.
+- Implement and validate the planned metadata-container skillset using an
+  approved GCD snapshot and representative archive fixtures before live
+  library updates.
 - Decide later whether wiki publication or discussion workflows are useful.
 
 Progress and decisions are tracked in the
