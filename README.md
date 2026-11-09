@@ -100,6 +100,8 @@ The design handoff is
 [`docs/metadata/GCD_Metadata_Containers_and_Codex_Integration.md`](docs/metadata/GCD_Metadata_Containers_and_Codex_Integration.md).
 The implementation review for the `comicbox` library used by Codex is in
 [`docs/metadata/Comicbox_Online_Metadata_and_Archive_Writes.md`](docs/metadata/Comicbox_Online_Metadata_and_Archive_Writes.md).
+The module and workflow diagrams for the current local Comicbox checkout are
+in [`docs/metadata/Comicbox_Architecture_and_Workflows.md`](docs/metadata/Comicbox_Architecture_and_Workflows.md).
 
 The skillset is **specified, not yet implemented or installed**. Its intended
 capabilities are:
