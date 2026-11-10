@@ -122,32 +122,34 @@ metadata.
 ## 4. Write workflow
 
 ```mermaid
-flowchart TD
-    Caller[Caller supplies path, canonical patch, formats, merge mode]
-    WriteAPI[write.py public write API]
-    Load[Load archive and existing metadata]
-    Merge[Merge patch and apply explicit deletions]
-    Canonical[Final canonical metadata]
-    Transform[Transform for each selected format]
-    Validate[Validate generated format data]
-    DryRun{Dry run?}
-    Preview[Return serialized preview; do not write]
-    Archive[Write metadata members and repack archive]
-    FinalPath[Return final path; may be converted to CBZ]
-    Result[Return per-file result and events]
+sequenceDiagram
+    participant Caller as Caller
+    participant API as Public write API
+    participant Box as Comicbox object
+    participant Merge as Merge and delete paths
+    participant Transform as Format transform
+    participant Validate as Schema validation
+    participant Archive as Archive writer
+    participant Result as Write result and events
 
-    Caller --> WriteAPI
-    WriteAPI --> Load
-    Load --> Merge
-    Merge --> Canonical
-    Canonical --> Transform
-    Transform --> Validate
-    Validate --> DryRun
-    DryRun -->|Yes| Preview
-    Preview --> Result
-    DryRun -->|No| Archive
-    Archive --> FinalPath
-    FinalPath --> Result
+    Caller->>API: Path, canonical patch, formats, merge mode
+    Note over Caller,API: Optional delete paths and dry-run flag
+    API->>Box: Load archive and existing metadata
+    Box->>Merge: Merge patch and apply explicit deletions
+    Merge-->>Box: Final canonical metadata
+    loop Each selected format
+        Box->>Transform: Serialize canonical fields for format
+        Transform->>Validate: Validate generated representation
+        Validate-->>Transform: Valid result or validation error
+    end
+    alt Dry run
+        Transform-->>API: Serialized preview, archive stays untouched
+    else Write
+        API->>Archive: Replace metadata members and repack
+        Archive-->>API: Final path, possibly converted to CBZ
+    end
+    API-->>Result: Per-file status, error, preview, and final path
+    Result-->>Caller: Result and lifecycle events
 ```
 
 Important write concepts: canonical patches; target format selection;
