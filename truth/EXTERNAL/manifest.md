@@ -17,17 +17,19 @@ make it authoritative. The approval state is maintained in
 
 | ID | Title | URL | Local Record | Owner | Checked | Review Cycle | Status | Intended Scope |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CB-EXT-001 | Mylar3 | <https://github.com/mylar3/mylar3> | — | Unknown | Not verified | Before use; annual | Candidate | Comic library management software; project source |
-| CB-EXT-002 | Mylar3 documentation | <https://mylarcomics.com/> | — | Unknown | Not verified | Before use; annual | Candidate | Mylar3 usage and configuration documentation |
-| CB-EXT-003 | Mylar3 Saltbox installation guide | <https://docs.saltbox.dev/sandbox/apps/mylar3/> | — | Unknown | Not verified | Before use; annual | Candidate | Saltbox-specific Mylar3 installation and configuration |
-| CB-EXT-004 | Kavita | <https://www.kavitareader.com/> | — | Unknown | Not verified | Before use; annual | Candidate | Kavita product and reader information |
-| CB-EXT-005 | Kavita source repository | <https://github.com/Kareadita/Kavita> | — | Unknown | Not verified | Before use; annual | Candidate | Kavita software source and project documentation |
-| CB-EXT-006 | Comicbox | <https://github.com/ajslater/comicbox> | — | Unknown | Not verified | Before use; annual | Candidate | Comicbox project source and documentation |
-| CB-EXT-007 | Codex | <https://github.com/ajslater/codex> | — | Unknown | Not verified | Before use; annual | Candidate | Related comic cataloging/management project; relationship to Comicbox to verify |
-| CB-EXT-008 | The Metron Project | <https://metron-project.github.io/> | — | Unknown | Not verified | Before use; annual | Candidate | Comic metadata project and documentation |
-| CB-EXT-009 | Metron Open Collective | <https://opencollective.com/metron> | — | Unknown | Not verified | Before use; annual | Candidate | Funding and project-support information; not a technical authority by itself |
-| CB-EXT-010 | Grand Comics Database | <https://www.comics.org/> | — | Unknown | Not verified | Before use; annual | Candidate | Comic bibliographic database and reference data |
-| CB-EXT-011 | CBL-ReadingLists | <https://github.com/DieselTech/CBL-ReadingLists> | — | Unknown | Not verified | Before use; annual | Candidate | Comic Book Library reading-list files and project documentation |
+| CB-EXT-001 | Mylar3 | <https://github.com/mylar3/mylar3> | [record](mylar3.md) | Mylar3 maintainers | 2026-11-05 | Before use; annual | Candidate | Comic library management software; project source |
+| CB-EXT-002 | Mylar3 documentation | <https://mylarcomics.com/> | [record](mylar3-documentation.md) | Mylar3 maintainers | 2026-11-05 | Before use; annual | Candidate | Mylar3 usage and configuration documentation |
+| CB-EXT-003 | Mylar3 Saltbox installation guide | <https://docs.saltbox.dev/sandbox/apps/mylar3/> | [record](mylar3-saltbox.md) | Saltbox maintainers | 2026-11-05 | Before use; annual | Candidate | Saltbox-specific Mylar3 installation and configuration |
+| CB-EXT-004 | Kavita | <https://www.kavitareader.com/> | [record](kavita.md) | Kavita maintainers | 2026-11-05 | Before use; annual | Candidate | Kavita product and reader information |
+| CB-EXT-005 | Kavita source repository | <https://github.com/Kareadita/Kavita> | [record](kavita-source.md) | Kareadita / Kavita maintainers | 2026-11-05 | Before use; annual | Candidate | Kavita software source and project documentation |
+| CB-EXT-006 | Comicbox | <https://github.com/ajslater/comicbox> | [record](comicbox.md) | ajslater / Comicbox maintainers | 2026-11-05 | Before use; annual | Candidate | Comicbox project source and documentation |
+| CB-EXT-007 | Codex | <https://github.com/ajslater/codex> | [record](codex.md) | ajslater / Codex maintainers | 2026-11-05 | Before use; annual | Candidate | Related comic cataloging/management project; relationship to Comicbox to verify |
+| CB-EXT-008 | The Metron Project | <https://metron-project.github.io/> | [record](metron.md) | The Metron Project | 2026-11-05 | Before use; annual | Candidate | Comic metadata project and documentation |
+| CB-EXT-009 | Metron Open Collective | <https://opencollective.com/metron> | [record](metron-open-collective.md) | The Metron Project / Open Collective | 2026-11-05 | Before use; annual | Candidate | Funding and project-support information; not a technical authority by itself |
+| CB-EXT-010 | Grand Comics Database | <https://www.comics.org/> | [record](gcd.md) | Grand Comics Database community and maintainers | 2026-11-05 | Before use; annual | Candidate | Comic bibliographic database and reference data |
+| CB-EXT-011 | CBL-ReadingLists | <https://github.com/DieselTech/CBL-ReadingLists> | [record](cbl-readinglists.md) | DieselTech | 2026-11-05 | Before use; annual | Candidate | Comic Book Library reading-list files and project documentation |
+| CB-EXT-012 | CLU Comics | <https://clucomics.org/> | [record](clu-comics.md) | CLU Comics maintainers | 2026-11-05 | Before use; annual | Candidate | Comic library management, metadata, and archive workflow |
+| CB-EXT-013 | Pullbox | <https://pullbox.app/docs/> | [record](pullbox.md) | Pullbox maintainers | 2026-11-05 | Before use; annual | Candidate | Comic collection management and related API/documentation |
 
 ## Intake Rules
 
