@@ -5,7 +5,7 @@
 > Source: https://www.kavitareader.com/
 > Last Verified: 2026-11-05
 > Scope: Comic, manga, and ebook reading-server product behavior
-> Status: Candidate
+> Status: Active
 > Source Type: official product site
 
 ## Authority Statement

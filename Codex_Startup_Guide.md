@@ -206,14 +206,12 @@ operating reference and customize the downstream project deliberately.
 For the broader adoption decision, read
 [`Arthur_Integration_How_To.md`](docs/agents/system/runbooks/Arthur_Integration_How_To.md).
 
-## Analyst-Oriented Companion Material
+## Comic-Archive Companion Material
 
-Analysts doing governed Oracle/PeopleSoft work should also read the
-[`New Analyst Reference Guide`](docs/reference/New_Analyst_Reference_Guide.md).
-It explains metadata provenance, read-only boundaries, source-of-truth
-distinctions, and usage accounting. The repository Markdown files remain the
-authoritative sources; generated PDFs are reference copies and may become
-outdated.
+Operators working on CB-MANAGE should read the relevant documents under
+`docs/comics/`, `docs/metadata/`, and `tools/comics/MANIFEST.md`. SQLite3-backed
+metadata and local provenance are in scope. Oracle/PeopleSoft tools and
+workflows are outside this repository's scope.
 
 ## Key Companion Docs
 

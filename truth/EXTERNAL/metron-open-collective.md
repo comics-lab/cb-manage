@@ -5,7 +5,7 @@
 > Source: https://opencollective.com/metron
 > Last Verified: 2026-11-05
 > Scope: Project funding and support information
-> Status: Candidate
+> Status: Active
 > Source Type: secondary project-support reference
 
 ## Authority Statement

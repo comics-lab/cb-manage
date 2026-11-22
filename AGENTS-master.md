@@ -2,58 +2,72 @@
 
 ## Purpose
 
+CB-MANAGE is a durable operating layer for comic-archive tooling,
+documentation, provenance, handoff, and safe automation. It coordinates work;
+it is not itself a comic archive or a license to modify one.
+
 ## Authority and Precedence
 
-## Recommended Read Order
+Use `AGENTS.md` for repository overrides, this file for shared policy, the
+registry and routing matrix for agent structure, `truth/` for authoritative
+facts, and scripts only after inspecting their current behavior. A lower-level
+document cannot silently override policy or truth.
 
-## Startup Permission and Approval Boundary
+## Safety and Boundaries
 
-## Directory Roles
+- Default to read-only inspection and dry-run planning.
+- Back up and validate archives before any approved write.
+- Preserve unknown metadata and unrelated files.
+- Never expose credentials, tokens, private keys, raw prompts, unrestricted
+  tool output, database results, PII, or hidden reasoning.
+- Do not perform destructive or remote actions without explicit approval.
+- Record uncertainty as `unknown`; do not manufacture provenance or coverage.
 
 ## Agent Structure
 
-## Multiple Agents and Skillsets
+Pinky is the managing agent. Specialists require a persona, contract, registry
+entry, routing rule when distinct, and a discoverable skill when a repeatable
+workflow warrants one. The usage-accounting agent observes resource use and
+does not authorize or redirect domain work.
 
-## What Not To Train
+## Source and Tool Discipline
 
-## Prompt Style
+Read relevant code, configuration, scripts, tests, and truth records before
+documenting behavior. Link to source-of-truth files instead of duplicating
+volatile details. Keep shell wrappers dry-run safe and make validation
+commands executable as written.
 
-## Project Customization
+## Logging and Accounting
 
-## Analyst-Oriented Companion Material
+- Start in basic/standard logging mode.
+- Escalate to extended logging for unresolved errors, failed validation,
+  blocked actions, permission problems, or unresolved ambiguity; notify Richard
+  when escalation starts and ends.
+- Keep daily, topic, event, and usage records append-only.
+- Record exactly one governance declaration per tracked task.
+- Record only material observable decisions.
+- Token and cost accounting is observational; absent telemetry is unknown and
+  absent pricing is `unpriced`.
 
-## Key Companion Docs
+## Handoff and Resume
+
+Before substantial work or a session boundary, update `docs/handoff/HANDOFF.md`
+and `docs/handoff/RESUME.md` with scope, current state, validation evidence,
+open risks, and the next safe action. Do not include secrets or raw transcripts.
 
 ## Configuration
 
 - Non-secret workspace configuration: `config/local.yaml`
-- Repository Codex hooks: `.codex/hooks.json`
+- Repository hooks: `.codex/hooks.json`
 - Machine-local Codex configuration remains outside Git.
-
-## Logging
-
-- Daily operational log: `logs/Dialog_YYYY-MM-DD.md`
-- Durable topic logs: `docs/agents/chats/`
-- Structured event ledger: `logs/agent_events/agent-events.jsonl`
-- Optional usage ledger: `logs/usage/usage.jsonl`
-- Generated aggregate reports: `logs/agent_events/reports/`
-- All durable logs are append-only; corrections are additive.
-- Every session starts in basic/standard logging mode.
-- Detail/verbatim and extended modes are session-scoped unless Richard declares a longer timeframe.
-- Any unresolved error, blocked action, failed validation, permission problem, or unresolved ambiguity escalates the session to extended logging until resolved.
-- The active agent must notify Richard when extended logging begins and ends.
-- Structured tracking records metadata and approved identifiers only; it must not store prompts, responses, tool payloads, credentials, SQL, database output, PII, or hidden reasoning.
-- `governance_declared` is required once per tracked task. Use `applied`, `not_required`, `bypassed`, or `unknown` explicitly.
-- `decision_recorded` is reserved for material observable outcomes and their source references.
-- Token and cost accounting is observational. Unknown telemetry remains unknown, and pricing remains `unpriced` without an approved dated pricing profile.
 
 ## Validation
 
-- Validate events with `python3 scripts/validate_agent_ledger.py logs/agent_events/agent-events.jsonl`.
-- Validate usage with `python3 scripts/validate_agent_ledger.py --kind usage logs/usage/usage.jsonl`.
-- Run regression tests with `python3 -m unittest tests/test_agent_usage_tracking.py`.
-- Generate reports with `python3 scripts/report_agent_usage.py`.
-
-## Handoff and Resume
+Use the governance validator, structural event validation, domain-specific
+tests, script help checks, and `git diff --check` as applicable. Historical
+append-only ledger gaps must be reported, not silently repaired.
 
 ## Operating Summary
+
+The quality bar is a reproducible, dry-run-safe, source-backed workflow with
+explicit provenance, validation, rollback guidance, and a usable handoff.

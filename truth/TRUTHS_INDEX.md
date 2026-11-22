@@ -4,7 +4,7 @@
 > Source: CB-MANAGE truth registry
 > Last Updated: 2026-11-03
 > Scope: URL-backed, local, and imported sources relevant to the comic archive and its related software repositories
-> Status: Active — registry initialized; candidate URLs recorded, source review pending
+> Status: Active — registry initialized; candidate and reviewed sources recorded
 
 ## Purpose
 
@@ -20,11 +20,11 @@ document is authoritative.
 | CB-EXT-INDEX | `truth/EXTERNAL/manifest.md` | URL/source manifest | Richard | 2026-11-03 | On change | Active | Registry for external documentation and web sources |
 | CB-SOURCES-ARCH | `truth/sources_of_truth_architecture.md` | Operating model | Richard | 2026-11-03 | On change | Active | Intake, authority, provenance, and review rules for sources |
 | CB-EXT-TEMPLATE | `truth/EXTERNAL/source_record_template.md` | Template | Richard | 2026-11-03 | On change | Active | Template for documenting one external source |
+| CB-EXT-014 | `truth/EXTERNAL/sqlite.md` | External documentation record | SQLite project maintainers | 2026-11-17 | Before use; on change | Active | SQLite3 SQL, typing, pragmas, CLI, and file-backed database behavior |
 
-The manifest currently contains eleven Candidate URLs migrated from a
-user-provided intake stub. None has been checked or promoted to authoritative
-status. Review each source's owner, scope, canonical URL, and authority before
-relying on it as truth.
+The manifest currently contains fourteen external source records. `CB-EXT-001`
+through `CB-EXT-014` are Active after Richard's review. Review each source's
+owner, scope, canonical URL, and authority before relying on it.
 
 ## Rules
 

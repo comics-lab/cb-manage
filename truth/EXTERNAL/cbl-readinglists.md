@@ -5,7 +5,7 @@
 > Source: https://github.com/DieselTech/CBL-ReadingLists
 > Last Verified: 2026-11-05
 > Scope: Comic Book Library reading-list files, series data, and project formats
-> Status: Candidate
+> Status: Active
 > Source Type: official project source
 
 ## Authority Statement

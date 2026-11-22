@@ -2,10 +2,10 @@
 
 > ID: `CB-EXT-001`
 > Owner: Mylar3 maintainers
-> Source: https://github.com/mylar3/mylar3
-> Last Verified: 2026-11-05
+> Source: https://github.com/MylarComics/mylar3
+> Last Verified: 2026-11-17
 > Scope: Comic acquisition, issue tracking, series management, and file handoff
-> Status: Candidate
+> Status: Active
 > Source Type: official project source
 
 ## Authority Statement
@@ -16,7 +16,7 @@ before relying on behavior operationally.
 
 ## Relevant Pages or Sections
 
-- https://github.com/mylar3/mylar3 — source, README, issues, and release history
+- https://github.com/MylarComics/mylar3 — source, README, issues, and release history
 - https://github.com/mylar3/mylar3/blob/master/API_REFERENCE — API reference
 
 ## What This Source Governs
@@ -33,6 +33,8 @@ before relying on behavior operationally.
 
 | Date | Checked by | Pages checked | Result / change |
 | --- | --- | --- | --- |
+| 2026-11-17 | Richard | Repository URL | Current repository location corrected to `MylarComics/mylar3`; authority review remains pending. |
+| 2026-11-17 | Richard | Repository URL and source record | CB-EXT-001 approved for Active use. |
 | 2026-11-05 | Codex | Repository and API reference | Canonical project source confirmed; record created. |
 
 ## Review

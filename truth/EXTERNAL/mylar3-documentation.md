@@ -2,10 +2,10 @@
 
 > ID: `CB-EXT-002`
 > Owner: Mylar3 maintainers
-> Source: https://mylarcomics.com/
-> Last Verified: 2026-11-05
+> Source: https://mylar.nerdfirehurricane.com/
+> Last Verified: 2026-11-17
 > Scope: Mylar3 user-facing documentation and operational guidance
-> Status: Candidate
+> Status: Active
 > Source Type: maintainer documentation
 
 ## Authority Statement
@@ -16,7 +16,7 @@ implementation diverge.
 
 ## Relevant Pages or Sections
 
-- https://mylarcomics.com/ — project documentation entry point
+- https://mylar.nerdfirehurricane.com/ — project documentation entry point
 
 ## What This Source Governs
 
@@ -31,6 +31,8 @@ implementation diverge.
 
 | Date | Checked by | Pages checked | Result / change |
 | --- | --- | --- | --- |
+| 2026-11-17 | Richard | Documentation site URL | Current documentation location corrected to `https://mylar.nerdfirehurricane.com/`; authority review remains pending. |
+| 2026-11-17 | Richard | Documentation site URL and source record | CB-EXT-002 approved for Active use. |
 | 2026-11-05 | Codex | Site entry point | Documentation source recorded; version alignment remains required. |
 
 ## Review

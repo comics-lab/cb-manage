@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import os
+import argparse
+import shutil
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -188,13 +190,60 @@ def rewrite_archive(cbz_path: Path, comicinfo_xml: bytes, metroninfo_xml: bytes)
     os.replace(tmp_path, cbz_path)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Plan or apply ComicInfo.xml and MetronInfo.xml updates for the built-in DC Finest records."
+    )
+    parser.add_argument(
+        "--book", type=int, action="append", dest="books",
+        help="1-based BOOKS entry to process; repeat for multiple entries (default: all)",
+    )
+    parser.add_argument(
+        "--apply", action="store_true",
+        help="write archives; without this flag the command is read-only",
+    )
+    parser.add_argument(
+        "--backup-dir", type=Path,
+        help="required with --apply; directory for one backup per archive",
+    )
+    parser.add_argument(
+        "--list", action="store_true", help="list built-in records and exit",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
-    for book in BOOKS:
+    args = parse_args()
+    if args.list:
+        for index, book in enumerate(BOOKS, 1):
+            print(f"{index}: {book['path']}")
+        return 0
+    if args.apply and args.backup_dir is None:
+        raise SystemExit("--apply requires --backup-dir")
+    selected = args.books or list(range(1, len(BOOKS) + 1))
+    invalid = [index for index in selected if index < 1 or index > len(BOOKS)]
+    if invalid:
+        raise SystemExit(f"invalid --book value(s): {invalid}")
+
+    for index in selected:
+        book = BOOKS[index - 1]
         cbz_path = Path(book["path"])
         comicinfo = build_comicinfo(book)
         metroninfo = build_metroninfo(book)
+        if not cbz_path.is_file():
+            print(f"missing {cbz_path}")
+            continue
+        if not args.apply:
+            print(f"would update {cbz_path}")
+            continue
+        assert args.backup_dir is not None
+        args.backup_dir.mkdir(parents=True, exist_ok=True)
+        backup_path = args.backup_dir / f"{cbz_path.name}.bak"
+        if backup_path.exists():
+            raise SystemExit(f"refusing to overwrite existing backup: {backup_path}")
+        shutil.copy2(cbz_path, backup_path)
         rewrite_archive(cbz_path, comicinfo, metroninfo)
-        print(f"updated {cbz_path}")
+        print(f"updated {cbz_path}; backup={backup_path}")
     return 0
 
 

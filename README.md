@@ -23,13 +23,12 @@ is not the comic archive application itself.
 ## Purpose and Current Status
 
 CB-MANAGE is intended to coordinate a collection of comic archive and software
-repositories. Planned utility work may include organizing and renaming comic
-files, converting archive formats such as CBR/CBZ, and maintaining project
-documentation. Those utilities are not implemented yet.
+repositories. The workspace includes comic metadata, archive, CBL, Mylar, and
+SQLite-oriented utilities. Live-library integration remains gated on fixtures,
+provenance, and explicit operator approval.
 
-The initial repository structure and privacy-preserving logging subsystem are
-in place. Broader project-specific agent roles, repo-management tools, and
-comic archive utilities remain planned work.
+The repository structure and privacy-preserving logging subsystem are in place.
+Broader domain coverage remains an explicit, fixture-backed workstream.
 
 ## Start Here
 
@@ -66,7 +65,7 @@ no token usage records yet, so usage and cost totals remain unknown/unpriced.
 
 | Path | Purpose | Current state |
 | --- | --- | --- |
-| `AGENTS.md`, `AGENTS-master.md` | Runtime entrypoint and shared policy | Initial outlines with logging rules; broader operating content remains to be completed |
+| `AGENTS.md`, `AGENTS-master.md` | Runtime entrypoint and shared policy | Complete repository-specific operating baseline |
 | `.agents/skills/` | Codex-discoverable repository skills | `agent-usage-accounting` is installed |
 | `skills/agents/` | Agent persona documents | Usage-accounting persona is installed |
 | `docs/agents/contracts/` | Agent contracts | Usage-accounting contract is installed |
@@ -76,9 +75,9 @@ no token usage records yet, so usage and cost totals remain unknown/unpriced.
 | `docs/agents/chats/` | Append-only topic records | Topic template and repository construction record are present |
 | `config/` | Non-secret project identity and runtime defaults | `local.yaml` is present |
 | `.codex/` | Repository Codex hooks | Lifecycle capture hooks are present; hooks need review/trust in Codex |
-| `scripts/`, `tests/` | Local tooling and checks | Usage-accounting tools and tests are present |
+| `scripts/`, `tests/` | Local tooling and checks | Usage-accounting tools, governance validation, and regression tests are present |
 | `logs/` | Daily logs, event ledger, usage records, and reports | Initial daily/event records and reports are present |
-| `docs/handoff/` | Handoff and resume files | Directory exists; initial handoff/resume pair is planned |
+| `docs/handoff/` | Handoff and resume files | Current handoff/resume pair is present |
 | `truth/` | Approved and candidate source records | Truth index and source architecture are initialized; eleven candidate URLs are listed for review, none promoted to authoritative status |
 | `.github/` | GitHub workflows and helpers | Wiki/discussion automation is not installed |
 
@@ -147,15 +146,16 @@ python3 -m unittest tests/test_agent_usage_tracking.py
 
 Review and trust `.codex/hooks.json` with Codex’s `/hooks` command, then start a
 new session to verify automatic lifecycle capture. The hooks record allowlisted
-metadata; they are not a transcript logger.
+metadata; they are not a transcript logger. CB-MANAGE uses SQLite3-backed comic
+metadata and workflows; Oracle tools and utilities are outside its scope.
 
 ## Planned Work
 
-- Complete CB-MANAGE operating policy and startup instructions.
+- Add fixture-backed coverage for the comic-domain utilities.
 - Define the comic archive repositories, their owners, boundaries, and
   authoritative truth sources.
 - Add only the agent personas, contracts, and skills needed for those projects.
-- Build a first handoff/resume pair and validate a fresh-session reconstruction.
+- Validate a fresh-session reconstruction from the handoff/resume pair.
 - Design and test comic archive utilities after their input/output rules are
   established.
 - Implement and validate the planned metadata-container skillset using an

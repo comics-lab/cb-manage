@@ -5,7 +5,7 @@
 > Source: https://metron-project.github.io/
 > Last Verified: 2026-11-05
 > Scope: Comic metadata service, schemas, API, and project guidance
-> Status: Candidate
+> Status: Active
 > Source Type: official project documentation
 
 ## Authority Statement

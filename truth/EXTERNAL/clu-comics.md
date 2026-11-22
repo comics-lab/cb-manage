@@ -5,7 +5,7 @@
 > Source: https://clucomics.org/
 > Last Verified: 2026-11-05
 > Scope: Comic library management, metadata, archive workflow, and project capabilities
-> Status: Candidate
+> Status: Active
 > Source Type: official project site
 
 ## Authority Statement

@@ -5,7 +5,7 @@
 > Source: https://github.com/Kareadita/Kavita
 > Last Verified: 2026-11-05
 > Scope: Kavita source, releases, configuration, scanner, and API behavior
-> Status: Candidate
+> Status: Active
 > Source Type: official project source
 
 ## Authority Statement

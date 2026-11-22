@@ -5,7 +5,7 @@
 > Source: https://pullbox.app/docs/
 > Last Verified: 2026-11-05
 > Scope: Comic collection management, documentation, and integration/API behavior
-> Status: Candidate
+> Status: Active
 > Source Type: official documentation
 
 ## Authority Statement

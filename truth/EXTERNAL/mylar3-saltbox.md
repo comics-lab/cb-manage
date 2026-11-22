@@ -5,7 +5,7 @@
 > Source: https://docs.saltbox.dev/sandbox/apps/mylar3/
 > Last Verified: 2026-11-05
 > Scope: Saltbox-specific deployment and integration guidance for Mylar3
-> Status: Candidate
+> Status: Active
 > Source Type: secondary deployment documentation
 
 ## Authority Statement

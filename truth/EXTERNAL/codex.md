@@ -5,7 +5,7 @@
 > Source: https://github.com/ajslater/codex
 > Last Verified: 2026-11-05
 > Scope: Web comic archive browser, reader, library scanner, OPDS, and metadata editing
-> Status: Candidate
+> Status: Active
 > Source Type: official project source
 
 ## Authority Statement

@@ -5,7 +5,7 @@
 > Source: https://www.comics.org/
 > Last Verified: 2026-11-05
 > Scope: Comic bibliographic reference data and publication records
-> Status: Candidate
+> Status: Active
 > Source Type: official reference database
 
 ## Authority Statement

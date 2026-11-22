@@ -5,7 +5,7 @@
 > Source: https://github.com/ajslater/comicbox
 > Last Verified: 2026-11-05
 > Scope: Comic archive metadata reading, synthesis, online tagging, and conversion
-> Status: Candidate
+> Status: Active
 > Source Type: official project source
 
 ## Authority Statement

@@ -27,7 +27,6 @@ docs/agents/chats/
 Use one descriptive lowercase topic file per continuing subject, for example:
 
 ```text
-docs/agents/chats/oracle_constraint_review.md
 ```
 
 Create a topic file when a new investigation or concern begins. Append to the
